@@ -35,7 +35,7 @@ function Display(mePlayer, text, offset)
         local coordsMe = GetEntityCoords(GetPlayerPed(mePlayer), false)
         local coords = GetEntityCoords(PlayerPedId(), false)
         local dist = Vdist2(coordsMe, coords)
-        if dist < 1500 then
+        if dist < 7 then
             TriggerEvent('chat:addMessage', {
                 template = '<div style="padding: 0.5vw; margin: 0.3vw; background-color: rgba(224, 11, 21, 0.6); border-radius: 5px;">{0}</div>',
                 args = { text}
@@ -55,7 +55,7 @@ function Display(mePlayer, text, offset)
             local coordsMe = GetEntityCoords(GetPlayerPed(mePlayer), false)
             local coords = GetEntityCoords(PlayerPedId(), false)
             local dist = Vdist2(coordsMe, coords)
-            if dist < 1500 then
+            if dist < 7 then
                 DrawText3D(coordsMe['x'], coordsMe['y'], coordsMe['z']+offset, text)
             end
         end
